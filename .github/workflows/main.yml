@@ -19,6 +19,7 @@ jobs:
       - name: Update text File
         run: |
               git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
+              ls
               cd Repo2.git
               git checkout main
               cat data.txt
