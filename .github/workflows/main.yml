@@ -19,6 +19,7 @@ jobs:
       - name: Update text File
         run: |
               git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git 
+              echo ${{ secrets.ACCESSTOKEN_GITHUB }}
               cd Repo2
               git checkout main
               commit_count=$(($(grep -oP 'my commit count is : \K\d+' data.txt) + 50))
