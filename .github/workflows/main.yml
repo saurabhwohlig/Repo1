@@ -31,5 +31,5 @@ jobs:
               git remote -v
               git add .
               git commit -m "updating newer data"
-              git remote set-url origin git@github.com:saurabhwohlig/Repo2.git
+              git remote set-url origin https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
               git push origin main                   
