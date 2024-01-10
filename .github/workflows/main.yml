@@ -21,7 +21,8 @@ jobs:
               git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
               cd Repo2
               git checkout main
-              /bin/bash
+              commit_count=$(($(grep -oP 'my commit count is : \K\d+' file.txt) + 50))
+              sed -i "s/my commit count is : [0-9]\+/my commit count is : $commit_count/" data.txt
               cat data.txt
               git config --global user.email "saurabh.mishra@wohlig.com"
               git config --global user.name "saurabh"
