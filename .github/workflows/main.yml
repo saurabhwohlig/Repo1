@@ -20,7 +20,7 @@ jobs:
         run: |
               git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
               ls
-              cd Repo2.git
+              cd Repo2
               git checkout main
               cat data.txt
               git config --global user.email "saurabh.mishra@wohlig.com"
