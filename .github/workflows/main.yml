@@ -21,7 +21,7 @@ jobs:
               git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
               cd Repo2
               git checkout main
-              vi data.txt
+              /bin/bash
               cat data.txt
               git config --global user.email "saurabh.mishra@wohlig.com"
               git config --global user.name "saurabh"
