@@ -18,7 +18,7 @@ jobs:
     
       - name: Update text File
         run: |
-              git clone https://github.com/saurabhwohlig/Repo2.git
+              git clone https://${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git 
               cd Repo2
               git checkout main
               commit_count=$(($(grep -oP 'my commit count is : \K\d+' data.txt) + 50))
@@ -31,5 +31,4 @@ jobs:
               git remote -v
               git add .
               git commit -m "updating newer data"
-              git remote set-url origin https://saurabhwohlig:${{ secrets.ACCESSTOKEN_GITHUB }}@github.com/saurabhwohlig/Repo2.git
               git push origin main                   
