@@ -27,8 +27,7 @@ jobs:
               echo "my commit count is"
               git config --global user.email "saurabh.mishra@wohlig.com"
               git config --global user.name "saurabh"
-              
-            #   git status
-            #   git add .
-            #   git commit -m "updating newer data"
-            #   git push origin main                   
+              git status
+              git add .
+              git commit -m "updating newer data"
+              git push origin main                   
